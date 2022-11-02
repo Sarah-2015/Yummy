@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="./images/logo.png" size="32x32">
+  <title>Yummy</title>
+  <link rel="stylesheet" href="./CSS/all.min.css">
+  <link rel="stylesheet" href="./CSS/bootstrap.min.css">
+  <link rel = "stylesheet" href = "./CSS/style.css">
+</head>
+<body>
+    <div class="loading-screen  position-fixed justify-content-center align-items-center">
+      <i class="fa fa-spinner fa-spin fa-3x text-white"></i>
+		
+	</div>
+  
+
+    <aside>
+
+        <div id="open-nav" class="open-nav">
+            <div>
+                <img src="./images/logo.png">
+
+            </div>
+
+            <div id="toggle-menu" class=" border-0 fs-5 mb-5 open-menu  "><i class="fa  fa-align-justify  "></i></div>
+          <div class="open-icons">
+            <div class="">
+                <i class="fa-solid fa-globe"></i>
+            </div>
+
+            <div>
+                <i class="fas fa-share-alt"></i>
+            </div>
+          </div>
+
+          </div>
+
+              <div id="mySidenav" class="side-nav col-sm-2 py-5 px-4  ">
+               
+                
+                <ul class="list-unstyled  ">
+                  <li class="nav-item item1 ">
+                    <a id="search" class="nav-link active" aria-current="page" href="#">Search</a>
+                  </li>
+                  <li class="nav-item item2">
+                    <a id="Categories" class="nav-link" href="#">Categories</a>
+                  </li>
+                  <li class="nav-item item3">
+                    <a id="area" class="nav-link" href="#">Area</a>
+                  </li> 
+                  <li class="nav-item item4">
+                    <a id="ingred" class="nav-link" href="#">Ingredients</a>
+                  </li> 
+                  <li class="nav-item item5">
+                    <a id="contact" class="nav-link" href="#" >Contact Us</a>
+                  </li>
+                </ul>
+                <div class="position-absolute bottom-0 my-4  ">
+                    <div class="mb-3 fs-5"  >
+                        <i class="fa-brands fa-facebook-f me-3"></i>
+                        <i class="fa-brands fa-twitter me-1"></i>
+                        <i class="fa-solid fa-globe me-1"></i>
+                    </div>
+                    <p class="text-muted fs-small fw-lighter ">Copyright Â© 2019 All Rights Reserved.<span class="bg-light text-muted ms-1">Sarah Ahmed</span></p>
+                </div>
+              </div>
+
+
+              
+    </aside>
+   
+        
+          
+            
+ 
+
+        <section class="meals container w-75  text-center     my-5 ">
+            <div id="search-div" class="row   d-none">
+                <div class="col-sm-6 ps-3">
+                    <input id="searchInput" class="form-control mb-2 " placeholder="Search By Name">
+                </div>
+                <div class="col-sm-6 ps-3">
+                    <input class="form-control " type="text" maxlength="1" id="searchInputt" placeholder="search By First Letter...">
+                </div>
+
+            </div>
+
+            <div id="contact-div" class="row  justify-content-around  d-none px-2 py-4  text-center">
+                <h2 class="text-white text-center mb-5" >Contact Us...</h2>
+                <div class="col-md-6 mb-3 ">
+                    <input class="  form-control" id="name" type="text" placeholder="Full Name">
+                    <p id="invalid-name" style="display: none;" class="invalid-feedback">invalid name</p>
+                </div>
+                
+                <div class="col-md-6 mb-3">
+                <input class="form-control  " id="email" type="email" placeholder="Email">
+                <p class="invalid-feedback" id="invalidmail" style="display: none;" >You have entered an invalid email address!</p>
+                </div>
+                
+                <div class="col-md-6 mb-3">
+                    <input class="form-control " id="phone" type="text" placeholder="Phone">
+                <p id="invalid-phone" style="display: none;" class="invalid-feedback">invalid Phone number</p>
+                </div>
+                
+                <div class="col-md-6 mb-3">
+                    <input class="form-control " id="age" type="text" placeholder="Age">
+                <p id="notvalid" style="display: none;" class="invalid-feedback">At least 13 years old</p>
+                </div>
+                
+                <div class="col-md-6 mb-3">
+                <input id="pass" class="form-control " type="password" placeholder="Enter your password">
+                <p id="pass-valid" class="invalid-feedback" style="display: none;">Password must include at least 8 characters and starts with at least one letter..</p>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <input id="repass" class="form-control  " type="password" placeholder="Enter your password">
+                    <p id="repass-valid" class="invalid-feedback" style="display: none;">Passwords don't match!</p>
+                    </div>
+                
+                <button id="submit" class="btn btn-outline-danger text-center w-50 m-auto" >Submit</button>
+
+            </div>
+            
+          
+
+            <div class="row myrow   ps-3    pt-5  ">
+              
+             
+              </div>
+          
+          
+                
+                 
+                
+        </div>
+ 
+      </section>
+   
+<script src="./JS/bootstrap.bundle.min.js"></script>
+ <script src="./JS/jquery-3.6.1.min.js"></script>
+ <script src="./JS/main.js"></script>   
+</body>
+</html>
+
+
+  
+
+ 
