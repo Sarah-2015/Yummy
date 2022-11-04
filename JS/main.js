@@ -138,20 +138,16 @@ async function searchByName(){
     if(mealsArr)
     {
         mealsArr.forEach(element => {
-            html+=`<div class="col-md-3 col-sm-6  ">
-            <div class="item py-3 ">
-            <div class="card overflow-hidden " data-id = "${element.idMeal}">
-            <img src="${element.strMealThumb}" class="card-img-top  " alt="...">
-           <div class="layer p-2" data-id = "${element.dMeal}">
-           <div data-id = "${element.idMeal}" class="card-body text-center">
-           <h3 data-id = "${element.idMeal}" class="card-title">${element.strMeal}</h3>
-           
-         </div>
-           </div>
-          </div>
-                
-            </div>
-        </div>`
+            html+=` <div class = "col-lg-3 col-md-4 col-sm-6 py-2   ">
+            <div class="card">
+  <img src="${element.strMealThumb}" class="card-img-top" alt="food">
+  <div class="card-body">
+    <h5 class="card-title">${element.strMeal.split(' ').slice(0, 3).join(' ')}</h5>
+    <a href="#" class="btn btn-primary" data-id = "${element.idMeal}">Get Recipe </a>
+  </div>
+</div>
+</div>
+`
           });
     }
     else{
@@ -173,20 +169,16 @@ async function searchByletter(){
     if(mealsArr)
     {
         mealsArr.forEach(element => {
-            html+=`<div class="col-md-3 col-sm-6 col-sm-6  ">
-            <div class="item py-3 ">
-            <div class="card overflow-hidden " data-id = "${element.idMeal}">
-            <img src="${element.strMealThumb}" class="card-img-top  " alt="...">
-           <div class="layer p-2" data-id = "${element.idMeal}">
-           <div data-id = "${element.idMeal}" class="card-body text-center">
-           <h3 data-id = "${element.idMeal}" class="card-title">${element.strMeal}</h3>
-           
-         </div>
-           </div>
-          </div>
-                
-            </div>
-        </div>`
+            html+=` <div class = "col-lg-3 col-md-4 col-sm-6 py-2   ">
+            <div class="card">
+  <img src="${element.strMealThumb}" class="card-img-top" alt="food">
+  <div class="card-body">
+    <h5 class="card-title">${element.strMeal.split(' ').slice(0, 3).join(' ')}</h5>
+    <a href="#" class="btn btn-primary" data-id = "${element.idMeal}">Get Recipe </a>
+  </div>
+</div>
+</div>
+`
           });
     }
     else{
@@ -209,21 +201,16 @@ async function getCat(){
          catArr.forEach(element => {
            
            
-             html+=  `<div class="  col-md-3 col-sm-6 py-2  " cat-id="${element.strCategory}">
-                        <div class="item rounded shadow  " cat-id="${element.strCategory}">
-                        <img cat-id="${element.strCategory}" class="w-100" src="${element.strCategoryThumb}">
-                        
-                        <div class="layer  " cat-id="${element.strCategory}" >
-                        <div class="text-center  " cat-id="${element.strCategory}">
-                            <h4  cat-id="${element.strCategory}">${element.strCategory}</h4>
-                            </div>
-                        </div>
-                        </div>
-
-                        </div>    
-                        `
-        
-       
+             html+=` <div class = "col-lg-3 col-md-4 col-sm-6 py-2   ">
+             <div class="card ">
+   <img src="${element.strCategoryThumb}" class="card-img-top" alt="food" cat-id = "${element.strCategory}">
+   <div class="card-body">
+     <h5 class="card-title" cat-id = "${element.strCategory}">${element.strCategory}</h5>
+     
+   </div>
+ </div>
+ </div>
+ `
                
            });
            
@@ -250,19 +237,15 @@ async function getCat(){
         areaArr.forEach(element => {
           
           
-            html+=  `<div class=" col-md-3 col-sm-6 p-2 text-center  ">
-                       <div class="item rounded shadow p-5 text-succ " area-id="${element.strArea}">
-                       <i area-id="${element.strArea}" class="fa-solid fa-city fa-3x mb-3"></i>
-                       <h5 class="text-white fw-lighter" area-id="${element.strArea}">${element.strArea}</h5>
-                       
+            html+=  `<div class="col-lg-3 col-md-4 col-sm-6 py-2   ">
+                       <div class="card py-5" area-id="${element.strArea}">
+                       <i area-id="${element.strArea}" class="fa-solid fa-city fa-3x mb-3 text-primary"></i>
+                       <h5  area-id="${element.strArea}">${element.strArea}</h5>
                        
                        </div>
 
                        </div>    
-                       `
-       
-      
-              
+                       ` 
           });
           
     }
@@ -289,10 +272,10 @@ async function getIngredients(){
        
           for(let i=0; i<20;i++)
 {
-            html+=  `<div class="col-md-3 col-sm-6 text-center p-2" ingred-id=" ${ingredArr[i].strIngredient}">
-                       <div ingred-id="${ingredArr[i].strIngredient}" class="item rounded shadow p-5 h-100 ">
+            html+=  `<div class="col-lg-3 col-md-4 col-sm-6 text-center py-2" ingred-id=" ${ingredArr[i].strIngredient}">
+                       <div ingred-id="${ingredArr[i].strIngredient}" class="card py-5  ">
                        <i ingred-id="${ingredArr[i].strIngredient}" class="fa-solid fa-bowl-food fa-3x mb-3 lemon "></i>
-                       <h5 class="text-white fw-lighter" ingred-id="${ingredArr[i].strIngredient}">${ingredArr[i].strIngredient}</h5>
+                       <h5  ingred-id="${ingredArr[i].strIngredient}">${ingredArr[i].strIngredient}</h5>
                        </div>
 
                        </div>    
@@ -315,20 +298,19 @@ async function home(){
     if(mealsArr)
     {
         mealsArr.forEach(element => {
-            html+=`<div class=" col-md-3 col-sm-6 ">
-            <div class="item py-3 ">
-            <div class="card overflow-hidden " data-id = "${element.idMeal}">
-            <img src="${element.strMealThumb}" class="card-img-top  " alt="...">
-            <div class="layer p-2" data-id = "${element.idMeal}">
-            <div data-id = "${element.idMeal}" class="card-body text-center">
-              <h3 data-id = "${element.idMeal}" class="card-title">${element.strMeal}</h3>
-              
-            </div>
-          </div>
-                </div>
-            </div>
-        </div>`
-          });
+            html+=` <div class = "col-lg-3 col-md-4 col-sm-6 py-2   ">
+            <div class="card ">
+  <img src="${element.strMealThumb}" class="card-img-top" alt="food">
+  <div class="card-body">
+    <h3 class="card-title">${element.strMeal?.split(' ').slice(0, 3).join(' ')}</h3>
+    <a href="#" class="btn btn-primary" data-id = "${element.idMeal}">Get Recipe </a>
+  </div>
+</div>
+</div>
+`
+      
+    
+    });
     }
     else{
         html = "Sorry, we didn't find any meal!";
@@ -347,23 +329,17 @@ async function categoryMeals(id){
      if(mealsArr)
      {
          mealsArr.forEach(element => {
-             html+=  `<div class=" col-md-3 col-sm-6  ">
-             <div class="item py-3 ">
-             <div class="card overflow-hidden "  data-id = "${element.idMeal}">
-             <img src="${element.strMealThumb}" class="card-img-top  " alt="...">
-             <div class="layer p-2" data-id = "${element.idMeal}">
-             <div data-id = "${element.idMeal}" class="card-body text-center">
-               <h3 data-id = "${element.idMeal}" class="card-title">${element.strMeal}</h3>
-              
-             </div>
-           </div>
-               </div>  
-             </div>
-         </div>`
-        
-       
-               
-           });
+             html+=` <div class = "col-lg-3 col-md-4 col-sm-6 py-2   ">
+             <div class="card">
+   <img src="${element.strMealThumb}" class="card-img-top" alt="food">
+   <div class="card-body">
+     <h5 class="card-title">${element.strMeal?.split(' ').slice(0, 3).join(' ')}</h5>
+     <a href="#" class="btn btn-primary" data-id = "${element.idMeal}">Get Recipe </a>
+   </div>
+ </div>
+ </div>
+ `           
+});
            
      }
      else{
@@ -387,19 +363,16 @@ async function categoryMeals(id){
      if(mealsArr)
      {
          mealsArr.forEach(element => {
-             html+=  `<div class=" col-md-3 col-sm-6   ">
-             <div class="item py-3 ">
-             <div class="card overflow-hidden"  data-id = "${element.idMeal}">
-             <img src="${element.strMealThumb}" class="card-img-top  " alt="...">
-             <div class="layer p-2" data-id = "${element.idMeal}">
-             <div data-id = "${element.idMeal}" class="card-body text-center">
-               <h3 data-id = "${element.idMeal}" class="card-title">${element.strMeal}</h3>
-               
-             </div>
-           </div>
-                 </div>
-             </div>
-         </div>`
+             html+=` <div class = "col-lg-3 col-md-4 col-sm-6 py-2   ">
+             <div class="card">
+   <img src="${element.strMealThumb}" class="card-img-top" alt="food">
+   <div class="card-body">
+     <h5 class="card-title">${element.strMeal?.split(' ').slice(0, 3).join(' ')}</h5>
+     <a href="#" class="btn btn-primary" data-id = "${element.idMeal}">Get Recipe </a>
+   </div>
+ </div>
+ </div>
+ `
         
        
                
@@ -421,19 +394,16 @@ async function categoryMeals(id){
      if(mealsArr)
      {
          mealsArr.forEach(element => {
-             html+=  `<div class=" col-md-3 col-sm-6  ">
-             <div class="item py-3" data-id = "${element.idMeal}" >
-             <div class="card overflow-hidden" data-id = "${element.idMeal}">
-             <img src="${element.strMealThumb}" class="card-img-top  " alt="...">
-             <div class="layer p-2" data-id = "${element.idMeal}">
-             <div data-id = "${element.idMeal}" class="card-body text-center">
-               <h3 data-id = "${element.idMeal}" class="card-title">${element.strMeal}</h3>
-               
-             </div>
-           </div>
-                 </div>
-             </div>
-         </div>`
+             html+=` <div class = "col-lg-3 col-md-4 col-sm-6 py-2   ">
+             <div class="card">
+   <img src="${element.strMealThumb}" class="card-img-top" alt="food">
+   <div class="card-body">
+     <h5 class="card-title">${element.strMeal?.split(' ').slice(0, 3).join(' ')}</h5>
+     <a href="#" class="btn btn-primary" data-id = "${element.idMeal}">Get Recipe </a>
+   </div>
+ </div>
+ </div>
+ `
         
        
                
@@ -457,9 +427,9 @@ document.addEventListener('click',async function(e){
 console.log(category);
    
      if(area!=null){
-        $(".loading-container").fadeIn(100)
+       
      AreaMeals(area);
-     $(".loading-container").fadeOut(500)
+    
      
      }
     else if(category!=null){
@@ -498,26 +468,38 @@ function mealRecipeModal(recipe){
  
    let meal=recipe[0]
  
-   let html=`
-   <div class="  col-md-4 text-white ">
-     <img class="w-100 " src=${meal.strMealThumb}>
-     <h1 class="fw-lighter mt-2 ">${meal.strMeal}</h1>
-   </div>
-   <div class="col-md-8 text-white text-start  ">
-     <h2 class="fw-light">Instructions</h2>
-     <p class="text-white  fw-light ps-1  mb-2">${meal.strInstructions}</p>
-     <p class="fw-bolder">Area : <span class="fw-lighter">${meal.strArea}</span></p>
-     <p class="fw-bolder">Category : <span class="fw-lighter ">${meal.strCategory}</span></p>
-     <h3>Recipes :</h3>
-     <ul class="d-flex flex-wrap  list-unstyled ps-0" id="recipes"></ul>
-     <h3 class="my-2 mx-1 p-1">Tags :</h3>
-     <ul class="d-flex flex-wrap list-unstyled ps-0" id="tags"></ul>
-     <a class="btn  btn-danger text-white" target="_blank" href=${meal.strYoutube}>Youtub</a>
-   </div>
-   
-   
+   let html=`<div class="bg-white pt-2" >
+   <div class="modal-dialog">
+     <div class="modal-content">
+       <div class="modal-header border-bottom mb-2 ">
+         <h5  class="modal-title ">${meal.strMeal}</h5>
+        
+       </div>
 
-  
+       <div class="modal-body row mt-2">
+       <div class="  col-md-4  ">
+       <img class="w-100 mb-3 " src=${meal.strMealThumb}>
+     </div>
+     <div class="col-md-8 text-start   ">
+       <h2>Instructions</h2>
+       <p class="">${meal.strInstructions}</p>
+       <p class="fw-bolder">Area : <span class="fw-lighter">${meal.strArea}</span></p>
+       <p class="fw-bolder">Category : <span class="fw-lighter ">${meal.strCategory}</span></p>
+       <h3>Recipes :</h3>
+       <ul class="d-flex flex-wrap  list-unstyled ps-0" id="recipes"></ul>
+       <h3 class="my-2 mx-1 p-1">Tags :</h3>
+       <ul class="d-flex flex-wrap list-unstyled ps-0" id="tags"></ul>
+       <a class="btn  btn-danger text-white mb-2" target="_blank" href=${meal.strYoutube}>Youtub</a>
+     </div>
+       </div>
+
+
+       <div class="modal-footer border-top py-1 ">
+         <button type="button" class="btn btn-secondary" onclick="home()">Close</button>
+       </div>
+     </div>
+   </div>
+ </div>
 
 `
 
